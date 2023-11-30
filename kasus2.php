@@ -23,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil nilai massa dan Kecepatan  dari input HTML
     $massa = $_POST["massa"];
     $kecepatan = $_POST["kecepatan"];
-    
+    echo "Nilai massa = $massa </br>";  
+    echo "Nilai kecepatan = $kecepatan </br></br>";
     
     // Fungsi menghitung energi kinetik
     function kinetik ($massa, $kecepatan)
@@ -34,15 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hitung energi kinetik dan cetak hasilnya
     $energi_kinetik = kinetik($massa, $kecepatan);
 
-    echo "Energi kinetik =" . $energi_kinetik;
+    echo "Energi kinetiknya adalah " . $energi_kinetik;
     echo "</br></br>";
 }
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Mengambil nilai dari input
-        echo "Nilai massa = $massa </br>";  
-        echo "Nilai kecepatan = $kecepatan </br></br>";
+     
 
         if ($massa > 0 && $kecepatan > 0){
             echo " Nilai Massa atau Kecepatan yang anda masukan adalah Bilangan Positif ";
